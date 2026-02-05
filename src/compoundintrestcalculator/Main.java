@@ -4,18 +4,26 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        final byte PERCENT=100;
-        System.out.println("---Compound Intrest Calculator---");
+
+        System.out.println("---Compound Interest Calculator---");
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter Principal Amount:");
-        double principalAMount=sc.nextDouble();
-        System.out.println("Enter Rate of Intrest (p.a):");
-        double rateOfIntrest=sc.nextDouble();
+
+
+        System.out.print("Enter Principal Amount:");
+        double principalAmount=sc.nextDouble();
+
+        System.out.println("Enter Rate of Interest (p.a):");
+        float rateOfInterest=sc.nextFloat();
+
+
         System.out.println("Enter Time Period in Years");
         int time=sc.nextInt();
-        double intrestAmount=principalAMount*(Math.pow((1+rateOfIntrest/PERCENT),time));
-        double compoundIntrest=intrestAmount-principalAMount;
-        System.out.println("Compound Intrest is:"+compoundIntrest);
+
+        //Usage of Constructors to initialize object
+        var ci =new CompoundInterest( principalAmount,rateOfInterest,time);
+
+
+        System.out.format("Compound Interest is:%.2f%n",ci.calculateCompoundInterest());
 
 
 
