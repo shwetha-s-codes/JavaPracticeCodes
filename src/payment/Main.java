@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        Account a=new Account();
-        a.upiPayment(1100);
+       var account=new Account(101,10000);
 
     }
 
