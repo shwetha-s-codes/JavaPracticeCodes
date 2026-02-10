@@ -3,5 +3,5 @@ package lambdaExpressions;
 //the method does not have any parameter
 
 public interface PrintInformation {
-    public void display();
+    public String display();
 }
